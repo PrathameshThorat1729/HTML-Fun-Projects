@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  background: #001666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.card {
+  height: 600px;
+  width: 90vw;
+  max-width: 350px;
+  background: #80ff86;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.card * {
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.card .attempted {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card .title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial;
+  line-height: 40px;
+  padding: 10px;
+  text-decoration: capitalize;
+  background-color: #ffffff55;
+}
+
+.card .options {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card .options .option {
+  flex: 1;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: #f9f9f999;
+  box-shadow: 0 0 1px #000;
+  border: 3px solid #ffffff55;
+  transition: 0.3s;
+}
+
+.card .options .correct {
+  background-color: #26d233;
+}
+
+.card .options .wrong {
+  background-color: #ed3131;
+}
+
+.card .next {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6f69cd;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.card .disable {
+  background-color: #727272;
+  color: #b0b0b0;
+}
+
+#result {
+  width: 90vw;
+  max-width: 350px;
+  background: #80ff86;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px #000;
+}
+
+#result h2 {
+  height: 30%;
+  padding: 15px;
+  background-color: #ffffff32;
+}
+
+#result hr {
+  background: #000;
+  border-color: #000;
+  margin: 15px 0;
+}
+
+#result div {
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #ffffff32;
+  border-radius: 10px;
+}
+
+#rights {
+  width: 100%;
+  color: white;
+  width: 90vw;
+  max-width: 350px;
+  padding: 15px 10px;
+}
+
+#rights a {
+  color: #b5f0ff;
+}
