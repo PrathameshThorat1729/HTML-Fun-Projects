@@ -105,7 +105,7 @@ function create_element () {
   
   const attempted = document.createElement("div");
   attempted.setAttribute("class", "attempted");
- attempted.innerHTML = `<div><b>Ongoing</b> : ${length+1-cards.length}</div><div><b>Total</b> : ${length}</div>`;
+  attempted.innerHTML = `<div><b>Ongoing</b> : ${length+1-cards.length}</div><div><b>Total</b> : ${length}</div>`;
   
   const title = document.createElement("div");
   title.setAttribute("class", "title");
@@ -113,15 +113,17 @@ function create_element () {
   
   const options = document.createElement("div");
   options.setAttribute("class", "options");
-  
-  cards[curr].options.forEach((el, ind)=> {
+  let indexes = [0, 1 ,2 ,3];
+  for (let i = 0; i < 4; i++) {
+    let curr_ind = parseInt((Math.random() * 10) % indexes.length);
     const opt = document.createElement("div");
     opt.setAttribute("class","option");
-    opt.innerText = el;
-    opt.setAttribute("index", ind);
+    opt.innerText = cards[curr].options[indexes[curr_ind]];
+    opt.setAttribute("index", indexes[curr_ind]);
     opt.onclick = option_clicked;
     options.appendChild(opt);
-  });
+    indexes.splice(curr_ind,1);
+  };
 	    
 	const next = document.createElement("div");
 	next.innerText = "CONTINUE"
